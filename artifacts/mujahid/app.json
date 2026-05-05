@@ -19,7 +19,8 @@
       "infoPlist": {
         "NSCameraUsageDescription": "مجاهد يحتاج إلى الكاميرا لمسح الباركود",
         "NSPhotoLibraryUsageDescription": "مجاهد يحتاج إلى مكتبة الصور لإضافة صور المنتجات",
-        "NSFaceIDUsageDescription": "مجاهد يستخدم Face ID لحماية بيانات المخزون"
+        "NSFaceIDUsageDescription": "مجاهد يستخدم Face ID لحماية بيانات المخزون",
+        "NSPhotoLibraryAddUsageDescription": "مجاهد يحتاج إلى الصلاحية لحفظ الصور"
       }
     },
     "android": {
@@ -31,8 +32,11 @@
       "permissions": [
         "android.permission.CAMERA",
         "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.READ_MEDIA_IMAGES",
         "android.permission.USE_BIOMETRIC",
-        "android.permission.USE_FINGERPRINT"
+        "android.permission.USE_FINGERPRINT",
+        "android.permission.VIBRATE"
       ],
       "softwareKeyboardLayoutMode": "pan"
     },
@@ -43,7 +47,43 @@
       "expo-router",
       "expo-font",
       "expo-web-browser",
-      "expo-navigation-bar"
+      "expo-navigation-bar",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "مجاهد يحتاج إلى الكاميرا لمسح الباركود",
+          "microphonePermission": false,
+          "recordAudioAndroid": false
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "مجاهد يحتاج إلى مكتبة الصور لإضافة صور المنتجات",
+          "cameraPermission": "مجاهد يحتاج إلى الكاميرا لالتقاط صور المنتجات"
+        }
+      ],
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "مجاهد يستخدم Face ID لحماية بيانات المخزون"
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "compileSdkVersion": 35,
+            "targetSdkVersion": 35,
+            "minSdkVersion": 24,
+            "newArchEnabled": true
+          },
+          "ios": {
+            "newArchEnabled": true,
+            "deploymentTarget": "15.1"
+          }
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true,
