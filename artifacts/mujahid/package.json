@@ -51,12 +51,14 @@
     "expo-av": "~16.0.8",
     "expo-camera": "^17.0.10",
     "expo-clipboard": "^8.0.8",
+    "expo-device": "^55.0.15",
     "expo-document-picker": "^14.0.8",
     "expo-file-system": "^19.0.22",
     "expo-local-authentication": "^17.0.8",
     "expo-navigation-bar": "^5.0.10",
     "expo-print": "^15.0.8",
     "expo-sharing": "^14.0.8",
-    "fuse.js": "^7.3.0"
+    "fuse.js": "^7.3.0",
+    "node-forge": "^1.4.0"
   }
 }
