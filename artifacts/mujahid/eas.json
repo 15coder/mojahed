@@ -17,7 +17,6 @@
         "simulator": true
       },
       "env": {
-        "EXPO_PUBLIC_DOMAIN": "",
         "npm_config_frozen_lockfile": "false"
       }
     },
@@ -30,7 +29,6 @@
         "buildType": "apk"
       },
       "env": {
-        "EXPO_PUBLIC_DOMAIN": "",
         "npm_config_frozen_lockfile": "false"
       }
     },
@@ -43,7 +41,6 @@
         "buildType": "app-bundle"
       },
       "env": {
-        "EXPO_PUBLIC_DOMAIN": "",
         "npm_config_frozen_lockfile": "false"
       }
     }
