@@ -36,7 +36,8 @@
         "android.permission.READ_MEDIA_IMAGES",
         "android.permission.USE_BIOMETRIC",
         "android.permission.USE_FINGERPRINT",
-        "android.permission.VIBRATE"
+        "android.permission.VIBRATE",
+        "android.permission.RECORD_AUDIO"
       ],
       "softwareKeyboardLayoutMode": "pan"
     },
@@ -89,9 +90,10 @@
       "typedRoutes": true,
       "reactCompiler": true
     },
+    "owner": "15coder",
     "extra": {
       "eas": {
-        "projectId": "a1bc6b65-4ac3-4005-8947-9cbdfd2c816b"
+        "projectId": "26ce9125-c7d8-4eb3-9a88-a64c55b09f68"
       }
     }
   }
