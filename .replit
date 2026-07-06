@@ -11,6 +11,27 @@ env = { "CI" = "true" }
 [workflows]
 runButton = "Project"
 
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Start application"
+
+[[workflows.workflow]]
+name = "Start application"
+author = "agent"
+
+[workflows.workflow.metadata]
+outputType = "webview"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "PORT=24425 pnpm --filter @workspace/mujahid run dev"
+waitForPort = 24425
+
 [agent]
 stack = "PNPM_WORKSPACE"
 expertMode = true
@@ -50,3 +71,6 @@ externalPort = 3000
 [[ports]]
 localPort = 24426
 externalPort = 3002
+
+[nix]
+channel = "stable-25_05"
