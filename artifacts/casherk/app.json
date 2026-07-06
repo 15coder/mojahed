@@ -1,11 +1,11 @@
 {
   "expo": {
     "name": "كاشيرك",
-    "slug": "mojahed",
+    "slug": "casherk",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "mujahid",
+    "scheme": "casherk",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "splash": {
@@ -15,7 +15,7 @@
     },
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.needaa.mujahid",
+      "bundleIdentifier": "com.needaa.casherk",
       "infoPlist": {
         "NSCameraUsageDescription": "كاشيرك يحتاج إلى الكاميرا لمسح الباركود",
         "NSPhotoLibraryUsageDescription": "كاشيرك يحتاج إلى مكتبة الصور لإضافة صور المنتجات",
@@ -24,7 +24,7 @@
       }
     },
     "android": {
-      "package": "com.needaa.mujahid",
+      "package": "com.needaa.casherk",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/icon.png",
         "backgroundColor": "#0D1E3D"
@@ -90,11 +90,6 @@
       "typedRoutes": true,
       "reactCompiler": true
     },
-    "owner": "15coder",
-    "extra": {
-      "eas": {
-        "projectId": "26ce9125-c7d8-4eb3-9a88-a64c55b09f68"
-      }
-    }
+    "owner": "15coder"
   }
 }

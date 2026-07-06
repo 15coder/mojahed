@@ -28,7 +28,7 @@ import { setScanResult } from '@/utils/scanResult';
 const CORNER_COLOR = '#4B7BF5';
 const FRAME_W = 320;
 const FRAME_H = 170;
-const RECENT_KEY = '@mujahid:recent_barcodes';
+const RECENT_KEY = '@casherk:recent_barcodes';
 
 export default function ScannerScreen() {
   const colors = useColors();

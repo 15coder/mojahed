@@ -11,7 +11,7 @@ import { Platform } from 'react-native';
 import { Product } from '@/types/product';
 import { rebuildIndex } from '@/utils/fuzzySearch';
 
-const PRODUCTS_KEY = '@mujahid:products';
+const PRODUCTS_KEY = '@casherk:products';
 
 interface ProductsContextValue {
   products: Product[];

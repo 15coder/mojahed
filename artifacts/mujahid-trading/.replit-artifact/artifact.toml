@@ -1,5 +1,5 @@
 kind = "web"
-previewPath = "/"
+previewPath = "/mujahid-trading"
 title = "مجاهد للتجارة"
 version = "1.0.0"
 id = "artifacts/mujahid-trading"
@@ -28,4 +28,4 @@ to = "/index.html"
 
 [services.env]
 PORT = "21740"
-BASE_PATH = "/"
+BASE_PATH = "/mujahid-trading"

@@ -2,7 +2,7 @@
 
 ## Overview
 
-pnpm workspace monorepo using TypeScript. Contains the "مجاهد للتجارة" (Mujahid Trade) inventory management mobile app built with Expo/React Native.
+pnpm workspace monorepo using TypeScript. Contains "كاشيرك" (Casherk) — an inventory management mobile app built with Expo/React Native.
 
 ## Stack
 
@@ -15,11 +15,11 @@ pnpm workspace monorepo using TypeScript. Contains the "مجاهد للتجار�
 
 ## Artifacts
 
-### `artifacts/mujahid` — مجاهد للتجارة (Mujahid Trade)
+### `artifacts/casherk` — كاشيرك (Casherk)
 - **Type**: Expo mobile app
 - **Preview path**: `/`
-- **Slug**: `mujahid`
-- **Bundle ID**: `com.needaa.mujahid`
+- **Slug**: `casherk`
+- **Bundle ID**: `com.needaa.casherk`
 - **Version**: 1.3.0
 - **Features**:
   - Product inventory management (CRUD)
@@ -39,15 +39,21 @@ pnpm workspace monorepo using TypeScript. Contains the "مجاهد للتجار�
   - **Keyboard avoidance** fixed for customer/notes modal on Android
   - RTL Arabic UI with Tajawal font
   - Dark/light mode support
-  - AsyncStorage persistence (key: `@mujahid:invoices_v3`)
+  - AsyncStorage persistence (keys prefixed `@casherk:`)
   - Custom in-app Toast notifications (ToastContext)
   - No bottom tab bar — settings accessible via icon in main header
   - Settings page has back button for navigation
   - **Template system removed** (templateStore.ts deleted)
+  - **License/activation system removed** — app opens directly to the product list (PIN/biometric lock is a separate, retained feature)
 
-## Invoice Store Keys
-- `@mujahid:invoices_v3` — current key (backward compatible with v2)
-- `@mujahid:settings` — app settings
+## Storage Keys
+- `@casherk:settings` — app settings
+- `@casherk:products` — product inventory
+- `@casherk:categories` — categories
+- `@casherk:recently_viewed` — recently viewed products
+- `@casherk:recent_barcodes` — recent barcode scans
+
+Note: renamed from the `@mujahid:` prefix used in earlier builds. This intentionally breaks compatibility with any previously installed preview APK — that tradeoff was explicitly requested by the user in order to fully rebrand.
 
 ## Currency System
 - **SYP_NEW** (ليرة جديدة): stored value as-is, shown as "ل.س"
@@ -61,10 +67,14 @@ pnpm workspace monorepo using TypeScript. Contains the "مجاهد للتجار�
 
 ## EAS Build (expo.dev)
 
-`artifacts/mujahid/eas.json` — configured for EAS builds:
+`artifacts/casherk/eas.json` — configured for EAS builds:
 - pnpm version: `10.26.1` (must be full semver)
 - node version: `22.14.0`
 - Profiles: `development` (APK), `preview` (APK), `production` (AAB)
+- Note: the app was renamed from slug `mojahed`/package `com.needaa.mujahid` to slug `casherk`/package `com.needaa.casherk`. The old EAS project (`@15coder/mojahed`) no longer matches — the next `eas build` will create a fresh EAS project under the new slug.
+
+## Other Artifacts
+- `artifacts/mujahid-trading` — legacy web artifact ("مجاهد للتجارة"), moved off the root preview path (`/mujahid-trading`) to free up `/` for the casherk mobile app, which is now the main artifact.
 
 ## Key Commands
 

@@ -30,7 +30,7 @@ import { sypToUsd, usdToSyp } from '@/utils/priceUtils';
 async function saveImageLocally(uri: string): Promise<string> {
   if (Platform.OS === 'web') return uri;
   if (uri.startsWith(`${FileSystem.documentDirectory}`)) return uri;
-  const dir = `${FileSystem.documentDirectory}mujahid-images/`;
+  const dir = `${FileSystem.documentDirectory}casherk-images/`;
   await FileSystem.makeDirectoryAsync(dir, { intermediates: true }).catch(() => {});
   const ext = uri.split('.').pop() || 'jpg';
   const filename = `${Date.now()}-${Math.random().toString(36).substring(2, 7)}.${ext}`;

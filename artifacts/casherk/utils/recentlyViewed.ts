@@ -1,6 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-const KEY = '@mujahid:recently_viewed';
+const KEY = '@casherk:recently_viewed';
 const MAX = 5;
 
 export async function addToRecentlyViewed(productId: string): Promise<void> {

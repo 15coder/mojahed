@@ -12,7 +12,7 @@ import { AppState, Platform } from 'react-native';
 import { DEFAULT_THEME_ID } from '@/constants/themes';
 import { AppSettings } from '@/types/product';
 
-const SETTINGS_KEY = '@mujahid:settings';
+const SETTINGS_KEY = '@casherk:settings';
 
 function generateSecurityKey(): string {
   const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789';

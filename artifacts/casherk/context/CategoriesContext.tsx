@@ -9,7 +9,7 @@ import React, {
 
 import { Category, DEFAULT_CATEGORIES } from '@/types/category';
 
-const CATEGORIES_KEY = '@mujahid:categories';
+const CATEGORIES_KEY = '@casherk:categories';
 
 function generateId(): string {
   return 'cat_' + Date.now().toString() + Math.random().toString(36).substring(2, 6);
