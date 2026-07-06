@@ -11,19 +11,15 @@ import React, {
 import { AppState, Platform } from 'react-native';
 
 import { DEFAULT_THEME_ID } from '@/constants/themes';
+import { verifyLicenseKey } from '@/constants/license';
 import { AppSettings } from '@/types/product';
 
 const SETTINGS_KEY = '@casherk:settings';
-const LICENSE_KEY = '@casherk:license'; // { token, expiresAt }
-
-// API base — injected at bundle time via EXPO_PUBLIC_DOMAIN
-const API_BASE = process.env.EXPO_PUBLIC_DOMAIN
-  ? `https://${process.env.EXPO_PUBLIC_DOMAIN}/api`
-  : 'http://localhost:8080/api';
+const LICENSE_KEY = '@casherk:license'; // { deviceId, key }
 
 interface StoredLicense {
-  token: string;
-  expiresAt: string; // ISO string
+  deviceId: string;
+  key: string;
 }
 
 function generateSecurityKey(): string {
@@ -71,7 +67,7 @@ interface SettingsContextValue {
   unlock: (pin?: string) => boolean;
   isLoading: boolean;
   effectiveDarkMode: 'light' | 'dark';
-  // Activation
+  // Activation (offline, permanent)
   isActivated: boolean;
   deviceId: string | null;
   activateLicense: (key: string) => Promise<{ success: boolean; error?: string }>;
@@ -132,50 +128,28 @@ export function SettingsProvider({ children }: { children: React.ReactNode }) {
 
   async function loadSettings() {
     try {
-      // 1. Get stable device identifier
+      // 1. Get device ID
       const id = await readDeviceId();
       setDeviceId(id);
       deviceIdRef.current = id;
 
-      // 2. Load app settings + stored license in parallel
+      // 2. Load settings + stored license in parallel
       const [stored, licenseRaw] = await Promise.all([
         AsyncStorage.getItem(SETTINGS_KEY),
         AsyncStorage.getItem(LICENSE_KEY),
       ]);
 
-      // 3. Check license
+      // 3. Verify stored license offline (permanent — no expiry check)
       if (licenseRaw) {
         const license: StoredLicense = JSON.parse(licenseRaw);
-        const expiresAt = new Date(license.expiresAt);
-
-        if (expiresAt <= new Date()) {
-          // Locally expired — remove and block
+        const valid =
+          license.deviceId === id && verifyLicenseKey(id, license.key);
+        if (valid) {
+          setIsActivated(true);
+        } else {
+          // Device changed or key tampered — clear and re-ask
           setIsActivated(false);
           await AsyncStorage.removeItem(LICENSE_KEY);
-        } else {
-          // Try server verification (5-second timeout)
-          try {
-            const controller = new AbortController();
-            const timer = setTimeout(() => controller.abort(), 5000);
-            const res = await fetch(`${API_BASE}/licenses/verify`, {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ deviceId: id, token: license.token }),
-              signal: controller.signal,
-            });
-            clearTimeout(timer);
-            const data = await res.json();
-
-            if (data.valid) {
-              setIsActivated(true);
-            } else {
-              setIsActivated(false);
-              await AsyncStorage.removeItem(LICENSE_KEY);
-            }
-          } catch {
-            // Server unreachable → offline grace: trust local expiry
-            setIsActivated(true);
-          }
         }
       } else {
         setIsActivated(false);
@@ -220,31 +194,21 @@ export function SettingsProvider({ children }: { children: React.ReactNode }) {
     return true;
   }, []);
 
+  /** Verifies key locally — no internet needed — permanent license */
   const activateLicense = useCallback(
     async (key: string): Promise<{ success: boolean; error?: string }> => {
       const id = deviceIdRef.current;
       if (!id) return { success: false, error: 'no_device_id' };
 
-      try {
-        const res = await fetch(`${API_BASE}/licenses/activate`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ deviceId: id, activationKey: key }),
-        });
-        const data = await res.json();
+      const valid = verifyLicenseKey(id, key);
+      if (!valid) return { success: false, error: 'invalid_key' };
 
-        if (res.ok && data.token) {
-          await AsyncStorage.setItem(
-            LICENSE_KEY,
-            JSON.stringify({ token: data.token, expiresAt: data.expiresAt }),
-          );
-          setIsActivated(true);
-          return { success: true };
-        }
-        return { success: false, error: data.error ?? 'unknown' };
-      } catch {
-        return { success: false, error: 'network_error' };
-      }
+      await AsyncStorage.setItem(
+        LICENSE_KEY,
+        JSON.stringify({ deviceId: id, key: key.toUpperCase().trim() }),
+      );
+      setIsActivated(true);
+      return { success: true };
     },
     [],
   );
