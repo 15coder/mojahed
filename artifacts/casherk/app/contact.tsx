@@ -162,7 +162,7 @@ const styles = StyleSheet.create({
     flex: 1,
     textAlign: 'center',
     fontSize: 18,
-    fontFamily: 'Tajawal_700Bold',
+    fontFamily: 'Qomra',
   },
   content: {
     padding: 16,
@@ -185,21 +185,21 @@ const styles = StyleSheet.create({
   },
   avatarText: {
     fontSize: 34,
-    fontFamily: 'Tajawal_700Bold',
+    fontFamily: 'Qomra',
   },
   devName: {
     fontSize: 20,
-    fontFamily: 'Tajawal_700Bold',
+    fontFamily: 'Qomra',
     textAlign: 'center',
   },
   devTitle: {
     fontSize: 14,
-    fontFamily: 'Tajawal_500Medium',
+    fontFamily: 'Qomra',
     textAlign: 'center',
   },
   devNote: {
     fontSize: 13,
-    fontFamily: 'Tajawal_400Regular',
+    fontFamily: 'Qomra',
     textAlign: 'center',
     lineHeight: 20,
     marginTop: 4,
@@ -225,7 +225,7 @@ const styles = StyleSheet.create({
   contactLabel: {
     flex: 1,
     fontSize: 16,
-    fontFamily: 'Tajawal_700Bold',
+    fontFamily: 'Qomra',
     textAlign: 'right',
   },
 });

@@ -556,7 +556,7 @@ export default function CalculatorScreen() {
                       </Text>
                       <Text style={[s.recTotal, { color: colors.primary }]}>
                         {fmtSYP(inv.totalSYP)}{' '}
-                        <Text style={{ fontFamily: 'Tajawal_400Regular', fontSize: 12, color: colors.mutedForeground }}>ل.س.ق</Text>
+                        <Text style={{ fontFamily: 'Qomra', fontSize: 12, color: colors.mutedForeground }}>ل.س.ق</Text>
                       </Text>
                     </View>
                   </Animated.View>
@@ -870,8 +870,8 @@ const s = StyleSheet.create({
   },
   headerBtn: { width: 36, height: 36, alignItems: 'center', justifyContent: 'center' },
   headerCenter: { flex: 1, alignItems: 'center' },
-  headerTitle: { fontFamily: 'Tajawal_700Bold', fontSize: 18 },
-  headerSub: { fontFamily: 'Tajawal_400Regular', fontSize: 13, marginTop: 1 },
+  headerTitle: { fontFamily: 'Qomra', fontSize: 18 },
+  headerSub: { fontFamily: 'Qomra', fontSize: 13, marginTop: 1 },
   arrowBtn: { width: 36, height: 36, borderRadius: 10, borderWidth: 1, alignItems: 'center', justifyContent: 'center' },
   arrowDot: { position: 'absolute', top: 5, right: 5, width: 7, height: 7, borderRadius: 4 },
 
@@ -879,10 +879,10 @@ const s = StyleSheet.create({
   tabBar: { flexDirection: 'row', borderBottomWidth: StyleSheet.hairlineWidth },
   tabItem: { flex: 1, alignItems: 'center', paddingVertical: 10, position: 'relative' },
   tabInner: { flexDirection: 'row', alignItems: 'center', gap: 4 },
-  tabLabel: { fontFamily: 'Tajawal_500Medium', fontSize: 13 },
+  tabLabel: { fontFamily: 'Qomra', fontSize: 13 },
   tabLine: { position: 'absolute', bottom: 0, left: 14, right: 14, height: 2.5, borderRadius: 2 },
   badge: { minWidth: 16, height: 16, borderRadius: 8, alignItems: 'center', justifyContent: 'center', paddingHorizontal: 4 },
-  badgeText: { color: '#fff', fontSize: 10, fontFamily: 'Tajawal_700Bold' },
+  badgeText: { color: '#fff', fontSize: 10, fontFamily: 'Qomra' },
 
   // Action bar
   actionBar: { flexDirection: 'row', alignItems: 'center', gap: 7, padding: 10 },
@@ -892,9 +892,9 @@ const s = StyleSheet.create({
     flex: 1, height: 40, borderRadius: 10, borderWidth: 1,
     flexDirection: 'row', alignItems: 'center', paddingHorizontal: 9, gap: 5,
   },
-  searchInput: { flex: 1, fontFamily: 'Tajawal_400Regular', fontSize: 14, textAlign: 'right', paddingVertical: 0 },
+  searchInput: { flex: 1, fontFamily: 'Qomra', fontSize: 14, textAlign: 'right', paddingVertical: 0 },
   scanBtn: { height: 40, paddingHorizontal: 14, borderRadius: 10, flexDirection: 'row', alignItems: 'center', gap: 5 },
-  scanBtnTxt: { color: '#fff', fontFamily: 'Tajawal_700Bold', fontSize: 14 },
+  scanBtnTxt: { color: '#fff', fontFamily: 'Qomra', fontSize: 14 },
 
   // Search dropdown
   dropdown: {
@@ -908,15 +908,15 @@ const s = StyleSheet.create({
     borderBottomWidth: StyleSheet.hairlineWidth, gap: 10,
   },
   dropInfo: { flex: 1, alignItems: 'flex-end' },
-  dropName: { fontFamily: 'Tajawal_700Bold', fontSize: 14 },
-  dropPrice: { fontFamily: 'Tajawal_400Regular', fontSize: 12, marginTop: 1 },
+  dropName: { fontFamily: 'Qomra', fontSize: 14 },
+  dropPrice: { fontFamily: 'Qomra', fontSize: 12, marginTop: 1 },
   addIcon: { width: 32, height: 32, borderRadius: 8, alignItems: 'center', justifyContent: 'center' },
 
   // Empty state
   empty: { flex: 1, alignItems: 'center', justifyContent: 'center', paddingBottom: 50 },
   emptyIcon: { width: 90, height: 90, borderRadius: 22, alignItems: 'center', justifyContent: 'center', marginBottom: 16 },
-  emptyTitle: { fontFamily: 'Tajawal_700Bold', fontSize: 17, marginBottom: 6 },
-  emptySub: { fontFamily: 'Tajawal_400Regular', fontSize: 14 },
+  emptyTitle: { fontFamily: 'Qomra', fontSize: 17, marginBottom: 6 },
+  emptySub: { fontFamily: 'Qomra', fontSize: 14 },
 
   // Item card
   itemCard: { borderRadius: 12, borderWidth: 1, marginBottom: 8, overflow: 'hidden' },
@@ -924,17 +924,17 @@ const s = StyleSheet.create({
   trashBtn: { width: 32, height: 32, borderRadius: 8, backgroundColor: '#FF3B3010', alignItems: 'center', justifyContent: 'center' },
   qtyBox: { flexDirection: 'row', alignItems: 'center', borderRadius: 8, borderWidth: 1 },
   qtyBtn: { width: 38, height: 38, alignItems: 'center', justifyContent: 'center' },
-  qtyBtnTxt: { fontFamily: 'Tajawal_700Bold', fontSize: 20 },
-  qtyNum: { minWidth: 34, textAlign: 'center', fontFamily: 'Tajawal_700Bold', fontSize: 16 },
+  qtyBtnTxt: { fontFamily: 'Qomra', fontSize: 20 },
+  qtyNum: { minWidth: 34, textAlign: 'center', fontFamily: 'Qomra', fontSize: 16 },
   itemInfo: { flex: 1, alignItems: 'flex-end' },
-  itemName: { fontFamily: 'Tajawal_700Bold', fontSize: 15 },
-  itemUnitPrice: { fontFamily: 'Tajawal_400Regular', fontSize: 12, marginTop: 2 },
+  itemName: { fontFamily: 'Qomra', fontSize: 15 },
+  itemUnitPrice: { fontFamily: 'Qomra', fontSize: 12, marginTop: 2 },
   itemFooter: {
     flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center',
     paddingHorizontal: 11, paddingVertical: 7, borderTopWidth: StyleSheet.hairlineWidth,
   },
-  itemTotalLbl: { fontFamily: 'Tajawal_400Regular', fontSize: 12 },
-  itemTotalVal: { fontFamily: 'Tajawal_700Bold', fontSize: 14 },
+  itemTotalLbl: { fontFamily: 'Qomra', fontSize: 12 },
+  itemTotalVal: { fontFamily: 'Qomra', fontSize: 14 },
 
   // Total bar
   totalBar: {
@@ -942,11 +942,11 @@ const s = StyleSheet.create({
     paddingHorizontal: 16, paddingTop: 12, borderTopWidth: StyleSheet.hairlineWidth, gap: 12,
   },
   totalAmounts: { flex: 1 },
-  totalMain: { fontFamily: 'Tajawal_700Bold', fontSize: 20 },
-  totalMainCur: { fontFamily: 'Tajawal_400Regular', fontSize: 13 },
-  totalSecondary: { fontFamily: 'Tajawal_400Regular', fontSize: 12, marginTop: 2 },
+  totalMain: { fontFamily: 'Qomra', fontSize: 20 },
+  totalMainCur: { fontFamily: 'Qomra', fontSize: 13 },
+  totalSecondary: { fontFamily: 'Qomra', fontSize: 12, marginTop: 2 },
   saveBtn: { height: 46, paddingHorizontal: 20, borderRadius: 12, flexDirection: 'row', alignItems: 'center', gap: 6 },
-  saveBtnTxt: { color: '#fff', fontFamily: 'Tajawal_700Bold', fontSize: 15 },
+  saveBtnTxt: { color: '#fff', fontFamily: 'Qomra', fontSize: 15 },
 
   // Records
   recordCard: { borderRadius: 12, borderWidth: 1, marginBottom: 8, overflow: 'hidden' },
@@ -954,10 +954,10 @@ const s = StyleSheet.create({
   recordActions: { flexDirection: 'row', gap: 6 },
   recBtn: { width: 32, height: 32, borderRadius: 8, alignItems: 'center', justifyContent: 'center' },
   recordMeta: { flex: 1, alignItems: 'flex-end' },
-  recordNum: { fontFamily: 'Tajawal_700Bold', fontSize: 15 },
-  recordCustomer: { fontFamily: 'Tajawal_500Medium', fontSize: 13, marginTop: 1 },
-  recordNote: { fontFamily: 'Tajawal_400Regular', fontSize: 12, marginTop: 1, fontStyle: 'italic' },
-  recordDate: { fontFamily: 'Tajawal_400Regular', fontSize: 12, marginTop: 1 },
+  recordNum: { fontFamily: 'Qomra', fontSize: 15 },
+  recordCustomer: { fontFamily: 'Qomra', fontSize: 13, marginTop: 1 },
+  recordNote: { fontFamily: 'Qomra', fontSize: 12, marginTop: 1, fontStyle: 'italic' },
+  recordDate: { fontFamily: 'Qomra', fontSize: 12, marginTop: 1 },
   recordDetails: {
     borderTopWidth: StyleSheet.hairlineWidth,
     paddingHorizontal: 12,
@@ -967,39 +967,39 @@ const s = StyleSheet.create({
   detailRow: {
     flexDirection: 'row', alignItems: 'center', gap: 8, paddingVertical: 6,
   },
-  detailName: { flex: 1, fontFamily: 'Tajawal_400Regular', fontSize: 13, textAlign: 'right' },
-  detailQty: { fontFamily: 'Tajawal_400Regular', fontSize: 12, color: '#888' },
-  detailTotal: { fontFamily: 'Tajawal_700Bold', fontSize: 13, minWidth: 80, textAlign: 'left' },
+  detailName: { flex: 1, fontFamily: 'Qomra', fontSize: 13, textAlign: 'right' },
+  detailQty: { fontFamily: 'Qomra', fontSize: 12, color: '#888' },
+  detailTotal: { fontFamily: 'Qomra', fontSize: 13, minWidth: 80, textAlign: 'left' },
   detailInfoBox: {
     marginTop: 6, marginBottom: 4, borderRadius: 8, padding: 8,
     borderTopWidth: StyleSheet.hairlineWidth, gap: 2,
   },
-  detailInfoTxt: { fontFamily: 'Tajawal_400Regular', fontSize: 12, textAlign: 'right' },
+  detailInfoTxt: { fontFamily: 'Qomra', fontSize: 12, textAlign: 'right' },
   recordBottom: {
     flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center',
     paddingHorizontal: 12, paddingVertical: 8, borderTopWidth: StyleSheet.hairlineWidth,
   },
-  recTotal: { fontFamily: 'Tajawal_700Bold', fontSize: 15 },
-  recSecondary: { fontFamily: 'Tajawal_400Regular', fontSize: 12 },
+  recTotal: { fontFamily: 'Qomra', fontSize: 15 },
+  recSecondary: { fontFamily: 'Qomra', fontSize: 12 },
 
   // Stats
   periodRow: { flexDirection: 'row', borderRadius: 12, borderWidth: 1, overflow: 'hidden', marginBottom: 14 },
   periodBtn: { flex: 1, paddingVertical: 10, alignItems: 'center' },
   periodBtnActive: {},
-  periodTxt: { fontFamily: 'Tajawal_500Medium', fontSize: 14 },
+  periodTxt: { fontFamily: 'Qomra', fontSize: 14 },
   statsRow: { flexDirection: 'row', gap: 10, marginBottom: 14 },
   statsCard: { flex: 1, borderRadius: 12, borderWidth: 1, padding: 12, alignItems: 'center', gap: 5 },
-  statsVal: { fontFamily: 'Tajawal_700Bold', fontSize: 13, textAlign: 'center' },
-  statsLbl: { fontFamily: 'Tajawal_400Regular', fontSize: 11, textAlign: 'center' },
+  statsVal: { fontFamily: 'Qomra', fontSize: 13, textAlign: 'center' },
+  statsLbl: { fontFamily: 'Qomra', fontSize: 11, textAlign: 'center' },
   statsEmpty: { marginTop: 40, alignItems: 'center' },
-  sectionTitle: { fontFamily: 'Tajawal_700Bold', fontSize: 15, marginBottom: 8, textAlign: 'right' },
+  sectionTitle: { fontFamily: 'Qomra', fontSize: 15, marginBottom: 8, textAlign: 'right' },
   statsInvRow: {
     flexDirection: 'row', alignItems: 'center', borderRadius: 10, borderWidth: 1,
     padding: 10, marginBottom: 6, gap: 8,
   },
-  statsInvNum: { fontFamily: 'Tajawal_700Bold', fontSize: 14, width: 44 },
-  statsInvName: { flex: 1, fontFamily: 'Tajawal_400Regular', fontSize: 13, textAlign: 'right' },
-  statsInvTotal: { fontFamily: 'Tajawal_700Bold', fontSize: 13 },
+  statsInvNum: { fontFamily: 'Qomra', fontSize: 14, width: 44 },
+  statsInvName: { flex: 1, fontFamily: 'Qomra', fontSize: 13, textAlign: 'right' },
+  statsInvTotal: { fontFamily: 'Qomra', fontSize: 13 },
 
   // Swipe-to-dismiss handle
   dragHandleZone: { paddingTop: 10, paddingBottom: 6, alignItems: 'center' },
@@ -1012,18 +1012,18 @@ const s = StyleSheet.create({
     borderTopWidth: 1, borderLeftWidth: 1, borderRightWidth: 1,
     paddingHorizontal: 22, paddingBottom: 38,
   },
-  panelTitle: { fontFamily: 'Tajawal_700Bold', fontSize: 18, textAlign: 'center', marginBottom: 20 },
-  fieldLbl: { fontFamily: 'Tajawal_500Medium', fontSize: 13, textAlign: 'right', marginBottom: 6 },
+  panelTitle: { fontFamily: 'Qomra', fontSize: 18, textAlign: 'center', marginBottom: 20 },
+  fieldLbl: { fontFamily: 'Qomra', fontSize: 13, textAlign: 'right', marginBottom: 6 },
   fieldInput: {
     borderRadius: 10, borderWidth: 1, paddingHorizontal: 14, paddingVertical: 10,
-    fontFamily: 'Tajawal_400Regular', fontSize: 15, textAlign: 'right', marginBottom: 16,
+    fontFamily: 'Qomra', fontSize: 15, textAlign: 'right', marginBottom: 16,
   },
   fieldArea: { height: 80, textAlignVertical: 'top' },
   modalBtns: { flexDirection: 'row', gap: 10, marginTop: 4 },
   modalCancel: { flex: 1, borderRadius: 12, borderWidth: 1, paddingVertical: 13, alignItems: 'center' },
-  modalCancelTxt: { fontFamily: 'Tajawal_500Medium', fontSize: 15 },
+  modalCancelTxt: { fontFamily: 'Qomra', fontSize: 15 },
   modalSave: { flex: 1, borderRadius: 12, paddingVertical: 13, alignItems: 'center' },
-  modalSaveTxt: { color: '#fff', fontFamily: 'Tajawal_700Bold', fontSize: 15 },
+  modalSaveTxt: { color: '#fff', fontFamily: 'Qomra', fontSize: 15 },
 
   // Leave modal
   leaveBackdrop: { flex: 1, backgroundColor: 'rgba(0,0,0,0.5)', alignItems: 'center', justifyContent: 'center', padding: 24 },
@@ -1032,12 +1032,12 @@ const s = StyleSheet.create({
     shadowColor: '#000', shadowOffset: { width: 0, height: 8 }, shadowOpacity: 0.22, shadowRadius: 18, elevation: 18,
   },
   leaveIconWrap: { width: 64, height: 64, borderRadius: 18, alignItems: 'center', justifyContent: 'center', marginBottom: 14 },
-  leaveTitle: { fontFamily: 'Tajawal_700Bold', fontSize: 18, marginBottom: 6, textAlign: 'center' },
-  leaveMsg: { fontFamily: 'Tajawal_400Regular', fontSize: 13, textAlign: 'center', lineHeight: 20, marginBottom: 22, opacity: 0.7 },
+  leaveTitle: { fontFamily: 'Qomra', fontSize: 18, marginBottom: 6, textAlign: 'center' },
+  leaveMsg: { fontFamily: 'Qomra', fontSize: 13, textAlign: 'center', lineHeight: 20, marginBottom: 22, opacity: 0.7 },
   leaveActionBtn: {
     width: '100%', borderRadius: 14, paddingVertical: 14,
     flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 7,
     marginBottom: 10,
   },
-  leaveActionTxt: { fontFamily: 'Tajawal_700Bold', fontSize: 15 },
+  leaveActionTxt: { fontFamily: 'Qomra', fontSize: 15 },
 });

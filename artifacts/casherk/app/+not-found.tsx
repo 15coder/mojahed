@@ -38,12 +38,12 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 22,
-    fontFamily: 'Tajawal_700Bold',
+    fontFamily: 'Qomra',
     textAlign: 'center',
   },
   subtitle: {
     fontSize: 14,
-    fontFamily: 'Tajawal_400Regular',
+    fontFamily: 'Qomra',
     textAlign: 'center',
   },
   link: {
@@ -54,6 +54,6 @@ const styles = StyleSheet.create({
   },
   linkText: {
     fontSize: 15,
-    fontFamily: 'Tajawal_700Bold',
+    fontFamily: 'Qomra',
   },
 });

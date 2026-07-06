@@ -157,7 +157,7 @@ const styles = StyleSheet.create({
     flex: 1,
     color: '#fff',
     fontSize: 14,
-    fontFamily: 'Tajawal_500Medium',
+    fontFamily: 'Qomra',
     textAlign: 'right',
     lineHeight: 20,
   },
@@ -170,6 +170,6 @@ const styles = StyleSheet.create({
   actionText: {
     color: '#fff',
     fontSize: 13,
-    fontFamily: 'Tajawal_700Bold',
+    fontFamily: 'Qomra',
   },
 });

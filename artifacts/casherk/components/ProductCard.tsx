@@ -308,7 +308,7 @@ const styles = StyleSheet.create({
   },
   name: {
     fontSize: 16,
-    fontFamily: 'Tajawal_700Bold',
+    fontFamily: 'Qomra',
     textAlign: 'right',
     flex: 1,
   },
@@ -330,7 +330,7 @@ const styles = StyleSheet.create({
   },
   categoryText: {
     fontSize: 10,
-    fontFamily: 'Tajawal_500Medium',
+    fontFamily: 'Qomra',
   },
   pricesRow: {
     flexDirection: 'row',
@@ -345,7 +345,7 @@ const styles = StyleSheet.create({
   },
   priceLabel: {
     fontSize: 10,
-    fontFamily: 'Tajawal_400Regular',
+    fontFamily: 'Qomra',
   },
   priceValueRow: {
     flexDirection: 'row',
@@ -354,17 +354,17 @@ const styles = StyleSheet.create({
   },
   priceValue: {
     fontSize: 14,
-    fontFamily: 'Tajawal_700Bold',
+    fontFamily: 'Qomra',
     textAlign: 'right',
   },
   priceNew: {
     fontSize: 11,
-    fontFamily: 'Tajawal_500Medium',
+    fontFamily: 'Qomra',
     textAlign: 'right',
   },
   priceUsd: {
     fontSize: 11,
-    fontFamily: 'Tajawal_400Regular',
+    fontFamily: 'Qomra',
     textAlign: 'right',
   },
   divider: {
@@ -373,7 +373,7 @@ const styles = StyleSheet.create({
   },
   timestamp: {
     fontSize: 10,
-    fontFamily: 'Tajawal_400Regular',
+    fontFamily: 'Qomra',
     textAlign: 'right',
     width: '100%',
   },
@@ -396,7 +396,7 @@ const styles = StyleSheet.create({
   updatedBadgeText: {
     color: '#fff',
     fontSize: 9,
-    fontFamily: 'Tajawal_700Bold',
+    fontFamily: 'Qomra',
   },
 
   gridCard: {
@@ -425,7 +425,7 @@ const styles = StyleSheet.create({
   },
   gridName: {
     fontSize: 13,
-    fontFamily: 'Tajawal_700Bold',
+    fontFamily: 'Qomra',
     textAlign: 'center',
     lineHeight: 19,
     width: '100%',
@@ -440,7 +440,7 @@ const styles = StyleSheet.create({
   },
   gridCategoryText: {
     fontSize: 9,
-    fontFamily: 'Tajawal_500Medium',
+    fontFamily: 'Qomra',
   },
   gridPriceBox: {
     width: '100%',
@@ -459,17 +459,17 @@ const styles = StyleSheet.create({
   },
   gridPriceOld: {
     fontSize: 13,
-    fontFamily: 'Tajawal_700Bold',
+    fontFamily: 'Qomra',
     textAlign: 'center',
   },
   gridPriceNew: {
     fontSize: 11,
-    fontFamily: 'Tajawal_500Medium',
+    fontFamily: 'Qomra',
     textAlign: 'center',
   },
   gridPriceUsd: {
     fontSize: 10,
-    fontFamily: 'Tajawal_400Regular',
+    fontFamily: 'Qomra',
     textAlign: 'center',
   },
   gridCostBox: {
@@ -482,10 +482,10 @@ const styles = StyleSheet.create({
   },
   gridCostLabel: {
     fontSize: 9,
-    fontFamily: 'Tajawal_400Regular',
+    fontFamily: 'Qomra',
   },
   gridCostVal: {
     fontSize: 10,
-    fontFamily: 'Tajawal_700Bold',
+    fontFamily: 'Qomra',
   },
 });

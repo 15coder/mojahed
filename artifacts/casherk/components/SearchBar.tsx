@@ -25,7 +25,7 @@ export function SearchBar({ value, onChangeText, placeholder = 'بحث عن من
     >
       <Ionicons name="search-outline" size={20} color={colors.silver} style={styles.icon} />
       <TextInput
-        style={[styles.input, { color: colors.foreground, fontFamily: 'Tajawal_400Regular' }]}
+        style={[styles.input, { color: colors.foreground, fontFamily: 'Qomra' }]}
         value={value}
         onChangeText={onChangeText}
         placeholder={placeholder}

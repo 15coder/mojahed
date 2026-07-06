@@ -155,7 +155,7 @@ const styles = StyleSheet.create({
   },
   miniLabelText: {
     fontSize: 13,
-    fontFamily: 'Tajawal_500Medium',
+    fontFamily: 'Qomra',
   },
   miniFab: {
     width: 46,

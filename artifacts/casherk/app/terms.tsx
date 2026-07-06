@@ -159,7 +159,7 @@ const styles = StyleSheet.create({
   },
   headerTitle: {
     fontSize: 17,
-    fontFamily: 'Tajawal_700Bold',
+    fontFamily: 'Qomra',
     textAlign: 'center',
     flex: 1,
   },
@@ -186,18 +186,18 @@ const styles = StyleSheet.create({
   },
   mainTitle: {
     fontSize: 22,
-    fontFamily: 'Tajawal_700Bold',
+    fontFamily: 'Qomra',
     textAlign: 'center',
   },
   appName: {
     fontSize: 16,
-    fontFamily: 'Tajawal_500Medium',
+    fontFamily: 'Qomra',
     textAlign: 'center',
     marginTop: -8,
   },
   date: {
     fontSize: 12,
-    fontFamily: 'Tajawal_400Regular',
+    fontFamily: 'Qomra',
     textAlign: 'center',
     marginTop: -8,
   },
@@ -211,7 +211,7 @@ const styles = StyleSheet.create({
   },
   sectionTitle: {
     fontSize: 15,
-    fontFamily: 'Tajawal_700Bold',
+    fontFamily: 'Qomra',
     textAlign: 'right',
   },
   sectionCard: {
@@ -222,7 +222,7 @@ const styles = StyleSheet.create({
   },
   paragraph: {
     fontSize: 14,
-    fontFamily: 'Tajawal_400Regular',
+    fontFamily: 'Qomra',
     textAlign: 'right',
     lineHeight: 24,
   },
@@ -240,7 +240,7 @@ const styles = StyleSheet.create({
   },
   bulletText: {
     fontSize: 14,
-    fontFamily: 'Tajawal_400Regular',
+    fontFamily: 'Qomra',
     textAlign: 'right',
     flex: 1,
   },
@@ -254,7 +254,7 @@ const styles = StyleSheet.create({
   },
   footerText: {
     fontSize: 13,
-    fontFamily: 'Tajawal_500Medium',
+    fontFamily: 'Qomra',
     textAlign: 'right',
     flex: 1,
     lineHeight: 22,
@@ -268,6 +268,6 @@ const styles = StyleSheet.create({
   },
   backBtnText: {
     fontSize: 16,
-    fontFamily: 'Tajawal_700Bold',
+    fontFamily: 'Qomra',
   },
 });

@@ -1,32 +1,36 @@
 import forge from 'node-forge';
 
 // ═══════════════════════════════════════════════════════════════════════
-//  السر الخاص — يجب أن يكون نفسه في لوحة التحكم
-//  غيّره لأي نص سري تريده قبل توزيع التطبيق
-//  لا تشاركه مع أحد — من يعرفه يستطيع توليد مفاتيح بنفسه
+//  المفتاح العام فقط — آمن للتضمين في التطبيق
+//  المفتاح الخاص موجود في tools/keygen-license.js (عند المطوّر فقط)
+//  النظام: RSA-2048 + SHA-256 — لا يمكن توليد مفاتيح بدون المفتاح الخاص
 // ═══════════════════════════════════════════════════════════════════════
-const LICENSE_SALT = 'CK-7x9mR2nQs-SALT-5wY3hZ8jBuT4eA';
+const PUBLIC_KEY_PEM = `-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoF77dqiipd4h+dws7Ury
+nKtcOQFm7EeYOCXn6QOKKpgHXTT0Qik6LB+mvJbK2UX8UfnM/Y0QCHNG/8lVFZrN
+Gqfyu7uOEw1RBg/Lw+l1hGM0dKNhh8ScfJB8vmWkj+3CnfDwJSoQrCPJqmqA3NXv
+OQqLhPNoP5id0CHfrJDynZzAlFtL8uiCAmiyQvU9oIXHuZT353UbhQok8Dm+Vt4k
+d1HwbghFVCN3vZPOtED10w8gO3i4x19u6HgIwpQW7JkLFqHC2AgFCvtK207pwDgg
+bKamRiU6yA5b64hBetOcBeoF8xjmYApMTdYpPWgFws6BQxqhr85iBTskMiGBA7jE
+hQIDAQAB
+-----END PUBLIC KEY-----`;
 
 /**
- * يولّد مفتاح التفعيل من رمز الجهاز
- * المخرج: XXXX-XXXX-XXXX (12 حرف hex بتنسيق 3 مجموعات)
+ * يتحقق من توقيع الترخيص محلياً بدون إنترنت.
+ *
+ * keyBase64: التوقيع الصادر عن tools/keygen-license.js — سلسلة Base64
+ *
+ * الخوارزمية: RSA-2048/SHA-256 PKCS#1 v1.5
  */
-export function generateLicenseKey(deviceId: string): string {
-  const hmac = forge.hmac.create();
-  hmac.start('sha256', LICENSE_SALT);
-  hmac.update(deviceId.toLowerCase().trim());
-  const hex = hmac.digest().toHex();
-  const raw = hex.slice(0, 12).toUpperCase();
-  return `${raw.slice(0, 4)}-${raw.slice(4, 8)}-${raw.slice(8, 12)}`;
-}
-
-/**
- * يتحقق من صحة مفتاح التفعيل مقابل رمز الجهاز
- */
-export function verifyLicenseKey(deviceId: string, key: string): boolean {
+export function verifyLicenseKey(deviceId: string, keyBase64: string): boolean {
   try {
-    const expected = generateLicenseKey(deviceId);
-    return key.toUpperCase().replace(/\s/g, '') === expected;
+    const pubKey = forge.pki.publicKeyFromPem(PUBLIC_KEY_PEM);
+    const md = forge.md.sha256.create();
+    md.update(deviceId.toLowerCase().trim(), 'utf8');
+    // إزالة أي مسافات أو أسطر جديدة تدخلت عند النسخ
+    const cleanKey = keyBase64.replace(/[\s\n\r]/g, '');
+    const sigBytes = forge.util.decode64(cleanKey);
+    return pubKey.verify(md.digest().bytes(), sigBytes);
   } catch {
     return false;
   }

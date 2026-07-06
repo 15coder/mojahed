@@ -103,7 +103,7 @@ export default function EditProductScreen() {
   if (!product) {
     return (
       <View style={[styles.container, { backgroundColor: colors.background, alignItems: 'center', justifyContent: 'center' }]}>
-        <Text style={{ color: colors.mutedForeground, fontSize: 16, fontFamily: 'Tajawal_500Medium' }}>المنتج غير موجود</Text>
+        <Text style={{ color: colors.mutedForeground, fontSize: 16, fontFamily: 'Qomra' }}>المنتج غير موجود</Text>
       </View>
     );
   }
@@ -526,18 +526,18 @@ const styles = StyleSheet.create({
     paddingBottom: 12,
     borderBottomWidth: 1,
   },
-  headerTitle: { fontSize: 17, fontFamily: 'Tajawal_700Bold', textAlign: 'center' },
+  headerTitle: { fontSize: 17, fontFamily: 'Qomra', textAlign: 'center' },
   headerCenter: { flex: 1, alignItems: 'center' },
-  unsavedBadge: { fontSize: 10, fontFamily: 'Tajawal_500Medium' },
+  unsavedBadge: { fontSize: 10, fontFamily: 'Qomra' },
   headerBtn: { padding: 4, width: 36 },
   saveBtn: { paddingHorizontal: 16, paddingVertical: 8, borderRadius: 10 },
-  saveBtnText: { fontSize: 14, fontFamily: 'Tajawal_700Bold' },
+  saveBtnText: { fontSize: 14, fontFamily: 'Qomra' },
   scroll: { flex: 1 },
   scrollContent: { padding: 16, gap: 12 },
   fieldSection: { gap: 4 },
-  fieldLabel: { fontSize: 12, fontFamily: 'Tajawal_500Medium', textAlign: 'right' },
-  subLabel: { fontSize: 11, fontFamily: 'Tajawal_400Regular', textAlign: 'right', marginBottom: 2 },
-  input: { height: 48, borderRadius: 12, borderWidth: 1, paddingHorizontal: 10, fontSize: 14, fontFamily: 'Tajawal_500Medium' },
+  fieldLabel: { fontSize: 12, fontFamily: 'Qomra', textAlign: 'right' },
+  subLabel: { fontSize: 11, fontFamily: 'Qomra', textAlign: 'right', marginBottom: 2 },
+  input: { height: 48, borderRadius: 12, borderWidth: 1, paddingHorizontal: 10, fontSize: 14, fontFamily: 'Qomra' },
   categorySelector: {
     height: 48,
     borderRadius: 12,
@@ -548,9 +548,9 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   selectedCategoryRow: { flexDirection: 'row', alignItems: 'center', gap: 8, flex: 1 },
-  selectedCategoryText: { fontSize: 15, fontFamily: 'Tajawal_500Medium', flex: 1, textAlign: 'right' },
-  categoryPlaceholder: { fontSize: 14, fontFamily: 'Tajawal_400Regular', flex: 1, textAlign: 'right' },
-  textarea: { borderRadius: 12, borderWidth: 1, paddingHorizontal: 14, paddingTop: 12, fontSize: 15, fontFamily: 'Tajawal_500Medium', minHeight: 90, textAlignVertical: 'top' },
+  selectedCategoryText: { fontSize: 15, fontFamily: 'Qomra', flex: 1, textAlign: 'right' },
+  categoryPlaceholder: { fontSize: 14, fontFamily: 'Qomra', flex: 1, textAlign: 'right' },
+  textarea: { borderRadius: 12, borderWidth: 1, paddingHorizontal: 14, paddingTop: 12, fontSize: 15, fontFamily: 'Qomra', minHeight: 90, textAlignVertical: 'top' },
   threeCol: { flexDirection: 'row', gap: 8 },
   flex: { flex: 1 },
   imagesRow: { flexDirection: 'row', flexWrap: 'wrap', gap: 10 },
@@ -566,20 +566,20 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     borderWidth: 1,
   },
-  profitText: { fontSize: 14, fontFamily: 'Tajawal_700Bold', flex: 1, textAlign: 'right' },
+  profitText: { fontSize: 14, fontFamily: 'Qomra', flex: 1, textAlign: 'right' },
   modalBackdrop: { flex: 1, backgroundColor: 'rgba(0,0,0,0.5)', justifyContent: 'flex-end' },
   modalSheet: { borderTopLeftRadius: 24, borderTopRightRadius: 24, borderWidth: 1, borderBottomWidth: 0, padding: 20, maxHeight: '70%' },
   modalHandle: { width: 40, height: 4, borderRadius: 2, alignSelf: 'center', marginBottom: 16 },
-  modalTitle: { fontSize: 18, fontFamily: 'Tajawal_700Bold', textAlign: 'center', marginBottom: 16 },
+  modalTitle: { fontSize: 18, fontFamily: 'Qomra', textAlign: 'center', marginBottom: 16 },
   categoryOption: { flexDirection: 'row', alignItems: 'center', gap: 12, paddingVertical: 12, paddingHorizontal: 12, borderRadius: 12, marginBottom: 4 },
   catOptionIcon: { width: 40, height: 40, borderRadius: 12, alignItems: 'center', justifyContent: 'center' },
-  catOptionText: { flex: 1, fontSize: 15, fontFamily: 'Tajawal_500Medium', textAlign: 'right' },
+  catOptionText: { flex: 1, fontSize: 15, fontFamily: 'Qomra', textAlign: 'right' },
   discardOverlay: { flex: 1, backgroundColor: 'rgba(0,0,0,0.5)', alignItems: 'center', justifyContent: 'center', paddingHorizontal: 24 },
   discardBox: { width: '100%', borderRadius: 24, borderWidth: 1, padding: 24 },
   discardIcon: { width: 60, height: 60, borderRadius: 18, alignItems: 'center', justifyContent: 'center', alignSelf: 'center', marginBottom: 12 },
-  discardTitle: { fontSize: 18, fontFamily: 'Tajawal_700Bold', textAlign: 'center', marginBottom: 8 },
-  discardMsg: { fontSize: 14, fontFamily: 'Tajawal_400Regular', textAlign: 'center', lineHeight: 22, marginBottom: 20 },
+  discardTitle: { fontSize: 18, fontFamily: 'Qomra', textAlign: 'center', marginBottom: 8 },
+  discardMsg: { fontSize: 14, fontFamily: 'Qomra', textAlign: 'center', lineHeight: 22, marginBottom: 20 },
   discardBtns: { flexDirection: 'row', gap: 10 },
   discardBtn: { flex: 1, height: 48, borderRadius: 12, alignItems: 'center', justifyContent: 'center' },
-  discardBtnText: { fontSize: 15, fontFamily: 'Tajawal_700Bold' },
+  discardBtnText: { fontSize: 15, fontFamily: 'Qomra' },
 });

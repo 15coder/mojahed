@@ -258,7 +258,7 @@ const styles = StyleSheet.create({
   },
   headerTitle: {
     fontSize: 17,
-    fontFamily: 'Tajawal_700Bold',
+    fontFamily: 'Qomra',
     textAlign: 'center',
     flex: 1,
   },
@@ -289,12 +289,12 @@ const styles = StyleSheet.create({
   },
   stepTitle: {
     fontSize: 20,
-    fontFamily: 'Tajawal_700Bold',
+    fontFamily: 'Qomra',
     textAlign: 'center',
   },
   stepDesc: {
     fontSize: 14,
-    fontFamily: 'Tajawal_400Regular',
+    fontFamily: 'Qomra',
     textAlign: 'center',
     lineHeight: 22,
   },
@@ -305,13 +305,13 @@ const styles = StyleSheet.create({
     borderWidth: 1.5,
     paddingHorizontal: 16,
     fontSize: 15,
-    fontFamily: 'Tajawal_500Medium',
+    fontFamily: 'Qomra',
     letterSpacing: 1,
     width: '100%',
   },
   errorText: {
     fontSize: 12,
-    fontFamily: 'Tajawal_400Regular',
+    fontFamily: 'Qomra',
     textAlign: 'right',
   },
   primaryBtn: {
@@ -326,7 +326,7 @@ const styles = StyleSheet.create({
   },
   primaryBtnText: {
     fontSize: 16,
-    fontFamily: 'Tajawal_700Bold',
+    fontFamily: 'Qomra',
   },
   hiddenInput: {
     position: 'absolute',
@@ -361,6 +361,6 @@ const styles = StyleSheet.create({
   tapHintBtn: { paddingVertical: 4 },
   tapHint: {
     fontSize: 12,
-    fontFamily: 'Tajawal_400Regular',
+    fontFamily: 'Qomra',
   },
 });

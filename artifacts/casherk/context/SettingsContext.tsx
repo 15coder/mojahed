@@ -205,7 +205,7 @@ export function SettingsProvider({ children }: { children: React.ReactNode }) {
 
       await AsyncStorage.setItem(
         LICENSE_KEY,
-        JSON.stringify({ deviceId: id, key: key.toUpperCase().trim() }),
+        JSON.stringify({ deviceId: id, key: key.replace(/[\s\n\r]/g, '') }),
       );
       setIsActivated(true);
       return { success: true };

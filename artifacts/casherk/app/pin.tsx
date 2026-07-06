@@ -247,12 +247,12 @@ const styles = StyleSheet.create({
   titleBlock: { alignItems: 'center', gap: 6 },
   title: {
     fontSize: 20,
-    fontFamily: 'Tajawal_700Bold',
+    fontFamily: 'Qomra',
     textAlign: 'center',
   },
   subtitle: {
     fontSize: 14,
-    fontFamily: 'Tajawal_400Regular',
+    fontFamily: 'Qomra',
     textAlign: 'center',
   },
   boxesRow: {
@@ -279,14 +279,14 @@ const styles = StyleSheet.create({
   },
   tapHint: {
     fontSize: 12,
-    fontFamily: 'Tajawal_400Regular',
+    fontFamily: 'Qomra',
     textAlign: 'center',
     marginTop: -8,
   },
   recoverBtn: { paddingVertical: 6, paddingHorizontal: 8 },
   recoverText: {
     fontSize: 14,
-    fontFamily: 'Tajawal_500Medium',
+    fontFamily: 'Qomra',
     textDecorationLine: 'underline',
     textAlign: 'center',
   },
@@ -298,6 +298,6 @@ const styles = StyleSheet.create({
   biometricBtn: { padding: 8 },
   biometricHint: {
     fontSize: 12,
-    fontFamily: 'Tajawal_400Regular',
+    fontFamily: 'Qomra',
   },
 });

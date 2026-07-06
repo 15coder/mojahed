@@ -125,17 +125,17 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 32,
-    fontFamily: 'Tajawal_700Bold',
+    fontFamily: 'Qomra',
     textAlign: 'center',
   },
   subtitle: {
     fontSize: 16,
-    fontFamily: 'Tajawal_400Regular',
+    fontFamily: 'Qomra',
     textAlign: 'center',
   },
   lockText: {
     fontSize: 14,
-    fontFamily: 'Tajawal_400Regular',
+    fontFamily: 'Qomra',
     textAlign: 'center',
     marginTop: 8,
   },
@@ -150,14 +150,14 @@ const styles = StyleSheet.create({
   },
   btnText: {
     fontSize: 16,
-    fontFamily: 'Tajawal_700Bold',
+    fontFamily: 'Qomra',
   },
   loader: {
     marginTop: 24,
   },
   error: {
     fontSize: 14,
-    fontFamily: 'Tajawal_400Regular',
+    fontFamily: 'Qomra',
     textAlign: 'center',
     marginTop: 8,
   },

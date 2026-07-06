@@ -56,9 +56,13 @@ import * as Print from 'expo-print';
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
     <style>
+      @font-face {
+        font-family: 'Qomra';
+        src: url('https://sytra.site/fonts/fonts/qomra.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+      }
       @font-face {
         font-family: 'ThmanyahSerif';
         src: url('data:font/otf;base64,${THMANYAH_FONT_B64}') format('opentype');
@@ -67,7 +71,7 @@ import * as Print from 'expo-print';
       }
       * { margin: 0; padding: 0; box-sizing: border-box; }
       body {
-        font-family: 'Tajawal', 'Arial', sans-serif;
+        font-family: 'Qomra', 'Arial', sans-serif;
         direction: rtl;
         background: #ffffff;
         padding: 48px 44px;
@@ -79,7 +83,7 @@ import * as Print from 'expo-print';
       }
       .store-name {
         text-align: center;
-        font-family: 'ThmanyahSerif', 'Tajawal', sans-serif;
+        font-family: 'ThmanyahSerif', 'Qomra', sans-serif;
         font-size: 44px;
         font-weight: 900;
         color: #1B2E5E;
@@ -117,7 +121,7 @@ import * as Print from 'expo-print';
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%) rotate(-20deg);
-        font-family: 'ThmanyahSerif', 'Tajawal', sans-serif;
+        font-family: 'ThmanyahSerif', 'Qomra', sans-serif;
         font-size: 68px;
         font-weight: 900;
         color: rgba(27, 46, 94, 0.055);

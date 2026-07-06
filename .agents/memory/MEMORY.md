@@ -1,0 +1,2 @@
+- [License system](license-system.md) — RSA-2048 offline device-bound license; public key in app, private key in tools/keygen-license.js
+- [Font: Qomra](font-qomra.md) — Custom Qomra font (sytra.site) replaces Tajawal; loaded from assets/fonts/Qomra.ttf via expo-font

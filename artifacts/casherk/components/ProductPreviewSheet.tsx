@@ -232,7 +232,7 @@ const styles = StyleSheet.create({
   },
   categoryText: {
     fontSize: 12,
-    fontFamily: 'Tajawal_500Medium',
+    fontFamily: 'Qomra',
   },
   topRow: {
     flexDirection: 'row',
@@ -254,7 +254,7 @@ const styles = StyleSheet.create({
   },
   productName: {
     fontSize: 18,
-    fontFamily: 'Tajawal_700Bold',
+    fontFamily: 'Qomra',
     textAlign: 'right',
     lineHeight: 26,
   },
@@ -268,11 +268,11 @@ const styles = StyleSheet.create({
   },
   barcodeText: {
     fontSize: 11,
-    fontFamily: 'Tajawal_400Regular',
+    fontFamily: 'Qomra',
   },
   notes: {
     fontSize: 12,
-    fontFamily: 'Tajawal_400Regular',
+    fontFamily: 'Qomra',
     textAlign: 'right',
     lineHeight: 18,
   },
@@ -291,21 +291,21 @@ const styles = StyleSheet.create({
   },
   priceLabel: {
     fontSize: 11,
-    fontFamily: 'Tajawal_400Regular',
+    fontFamily: 'Qomra',
   },
   priceValue: {
     fontSize: 15,
-    fontFamily: 'Tajawal_700Bold',
+    fontFamily: 'Qomra',
     textAlign: 'center',
   },
   priceNew: {
     fontSize: 11,
-    fontFamily: 'Tajawal_500Medium',
+    fontFamily: 'Qomra',
     textAlign: 'center',
   },
   priceUsd: {
     fontSize: 11,
-    fontFamily: 'Tajawal_400Regular',
+    fontFamily: 'Qomra',
   },
   priceDivider: {
     width: 1,
@@ -331,6 +331,6 @@ const styles = StyleSheet.create({
   },
   actionText: {
     fontSize: 15,
-    fontFamily: 'Tajawal_700Bold',
+    fontFamily: 'Qomra',
   },
 });
