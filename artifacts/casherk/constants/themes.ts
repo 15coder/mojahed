@@ -34,6 +34,39 @@ export interface AppTheme {
 
 export const THEMES: AppTheme[] = [
   {
+    id: 'casherk',
+    name: 'كاشيرك الفيروزي',
+    emoji: '🩵',
+    light: {
+      primary: '#0D9E96',
+      primaryForeground: '#FFFFFF',
+      secondary: '#E0FAF8',
+      secondaryForeground: '#0D9E96',
+      accent: '#1ABCB0',
+      accentForeground: '#FFFFFF',
+      success: '#16A34A',
+      muted: '#CCFAF7',
+      border: '#A0EDE8',
+      input: '#EDFCFB',
+      background: '#F2FFFE',
+      card: '#FFFFFF',
+    },
+    dark: {
+      primary: '#1ABCB0',
+      primaryForeground: '#042F2E',
+      secondary: '#0A2422',
+      secondaryForeground: '#5DEAD4',
+      accent: '#1ABCB0',
+      accentForeground: '#042F2E',
+      success: '#34D399',
+      muted: '#0A2422',
+      border: '#143533',
+      input: '#0A2422',
+      background: '#061A19',
+      card: '#0D2523',
+    },
+  },
+  {
     id: 'ocean',
     name: 'المحيط الأزرق',
     emoji: '🌊',
@@ -365,7 +398,7 @@ export const THEMES: AppTheme[] = [
   },
 ];
 
-export const DEFAULT_THEME_ID = 'ocean';
+export const DEFAULT_THEME_ID = 'casherk';
 
 export function getThemeById(id: string): AppTheme {
   return THEMES.find((t) => t.id === id) ?? THEMES[0];

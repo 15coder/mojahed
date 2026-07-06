@@ -11,7 +11,7 @@
     "splash": {
       "image": "./assets/images/icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#0D1E3D"
+      "backgroundColor": "#1ABCB0"
     },
     "ios": {
       "supportsTablet": false,
@@ -27,7 +27,7 @@
       "package": "com.needaa.casherk",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/icon.png",
-        "backgroundColor": "#0D1E3D"
+        "backgroundColor": "#1ABCB0"
       },
       "permissions": [
         "android.permission.CAMERA",

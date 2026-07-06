@@ -22,6 +22,7 @@ import { SettingsProvider, useSettings } from '@/context/SettingsContext';
 import { ToastProvider } from '@/context/ToastContext';
 import PinScreen from '@/app/pin';
 import PinRecoverScreen from '@/app/pin-recover';
+import ActivateScreen from '@/app/activate';
 
 I18nManager.allowRTL(true);
 I18nManager.forceRTL(true);
@@ -31,7 +32,7 @@ SplashScreen.preventAutoHideAsync();
 const queryClient = new QueryClient();
 
 function RootLayoutNav() {
-  const { settings, isLocked, unlock, isLoading } = useSettings();
+  const { settings, isLocked, unlock, isLoading, isActivated, activate } = useSettings();
   const [showRecovery, setShowRecovery] = useState(false);
 
   useEffect(() => {
@@ -42,6 +43,10 @@ function RootLayoutNav() {
   }, []);
 
   if (isLoading) return null;
+
+  if (!isActivated) {
+    return <ActivateScreen onActivate={activate} />;
+  }
 
   if (isLocked) {
     if (showRecovery) {

@@ -13,6 +13,7 @@ import { DEFAULT_THEME_ID } from '@/constants/themes';
 import { AppSettings } from '@/types/product';
 
 const SETTINGS_KEY = '@casherk:settings';
+const ACTIVATION_KEY = '@casherk:activated';
 
 function generateSecurityKey(): string {
   const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789';
@@ -47,6 +48,8 @@ interface SettingsContextValue {
   unlock: (pin?: string) => boolean;
   isLoading: boolean;
   effectiveDarkMode: 'light' | 'dark';
+  isActivated: boolean;
+  activate: () => Promise<void>;
 }
 
 export const SettingsContext = createContext<SettingsContextValue | null>(null);
@@ -55,6 +58,7 @@ export function SettingsProvider({ children }: { children: React.ReactNode }) {
   const [settings, setSettings] = useState<AppSettings>(DEFAULT_SETTINGS);
   const [isLocked, setIsLocked] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [isActivated, setIsActivated] = useState(false);
   const [systemColorScheme, setSystemColorScheme] = useState<'light' | 'dark'>('light');
   const backgroundTimeRef = useRef<number | null>(null);
   const settingsRef = useRef<AppSettings>(DEFAULT_SETTINGS);
@@ -102,7 +106,11 @@ export function SettingsProvider({ children }: { children: React.ReactNode }) {
 
   async function loadSettings() {
     try {
-      const stored = await AsyncStorage.getItem(SETTINGS_KEY);
+      const [stored, activated] = await Promise.all([
+        AsyncStorage.getItem(SETTINGS_KEY),
+        AsyncStorage.getItem(ACTIVATION_KEY),
+      ]);
+      setIsActivated(activated === 'true');
       if (stored) {
         const parsed: AppSettings = { ...DEFAULT_SETTINGS, ...JSON.parse(stored) };
         if (!parsed.securityKey) parsed.securityKey = generateSecurityKey();
@@ -120,6 +128,11 @@ export function SettingsProvider({ children }: { children: React.ReactNode }) {
       setIsLoading(false);
     }
   }
+
+  const activate = useCallback(async () => {
+    await AsyncStorage.setItem(ACTIVATION_KEY, 'true');
+    setIsActivated(true);
+  }, []);
 
   const updateSettings = useCallback(async (partial: Partial<AppSettings>) => {
     setSettings((prev) => {
@@ -149,7 +162,7 @@ export function SettingsProvider({ children }: { children: React.ReactNode }) {
     settings.darkMode === 'system' ? systemColorScheme : settings.darkMode;
 
   return (
-    <SettingsContext.Provider value={{ settings, updateSettings, isLocked, lock, unlock, isLoading, effectiveDarkMode }}>
+    <SettingsContext.Provider value={{ settings, updateSettings, isLocked, lock, unlock, isLoading, effectiveDarkMode, isActivated, activate }}>
       {children}
     </SettingsContext.Provider>
   );
