@@ -32,7 +32,7 @@ SplashScreen.preventAutoHideAsync();
 const queryClient = new QueryClient();
 
 function RootLayoutNav() {
-  const { settings, isLocked, unlock, isLoading, isActivated, activate } = useSettings();
+  const { settings, isLocked, unlock, isLoading, isActivated, deviceId, activateLicense } = useSettings();
   const [showRecovery, setShowRecovery] = useState(false);
 
   useEffect(() => {
@@ -45,7 +45,7 @@ function RootLayoutNav() {
   if (isLoading) return null;
 
   if (!isActivated) {
-    return <ActivateScreen onActivate={activate} />;
+    return <ActivateScreen deviceId={deviceId} onActivate={activateLicense} />;
   }
 
   if (isLocked) {

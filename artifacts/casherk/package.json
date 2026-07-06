@@ -50,6 +50,7 @@
   },
   "dependencies": {
     "@expo-google-fonts/tajawal": "^0.4.1",
+    "expo-application": "~6.0.2",
     "expo-av": "~16.0.8",
     "expo-camera": "^17.0.10",
     "expo-clipboard": "^8.0.8",
