@@ -41,7 +41,7 @@ export function BiometricLock({ onUnlock }: Props) {
         return;
       }
       const result = await LocalAuthentication.authenticateAsync({
-        promptMessage: 'تطبيق مجاهد - التحقق من الهوية',
+        promptMessage: 'تطبيق كاشيرك - التحقق من الهوية',
         fallbackLabel: 'استخدم رمز المرور',
         cancelLabel: 'إلغاء',
       });
@@ -74,7 +74,7 @@ export function BiometricLock({ onUnlock }: Props) {
         </View>
       </View>
 
-      <Text style={[styles.title, { color: colors.foreground }]}>مجاهد</Text>
+      <Text style={[styles.title, { color: colors.foreground }]}>كاشيرك</Text>
       <Text style={[styles.subtitle, { color: colors.mutedForeground }]}>
         نظام إدارة المخزون
       </Text>

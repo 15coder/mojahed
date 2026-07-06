@@ -109,7 +109,7 @@ export default function ContactScreen() {
           </View>
           <Text style={[styles.devName, { color: colors.foreground }]}>{DEVELOPER}</Text>
           <Text style={[styles.devTitle, { color: colors.mutedForeground }]}>
-            مطوّر تطبيق مجاهد للتجارة
+            مطوّر تطبيق كاشيرك
           </Text>
           <Text style={[styles.devNote, { color: colors.silver }]}>
             للدعم الفني، الاقتراحات، أو الاستفسارات – تواصل معنا عبر أي من القنوات التالية

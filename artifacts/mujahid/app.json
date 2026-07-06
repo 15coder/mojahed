@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "مجاهد للتجارة",
+    "name": "كاشيرك",
     "slug": "mojahed",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -17,10 +17,10 @@
       "supportsTablet": false,
       "bundleIdentifier": "com.needaa.mujahid",
       "infoPlist": {
-        "NSCameraUsageDescription": "مجاهد يحتاج إلى الكاميرا لمسح الباركود",
-        "NSPhotoLibraryUsageDescription": "مجاهد يحتاج إلى مكتبة الصور لإضافة صور المنتجات",
-        "NSFaceIDUsageDescription": "مجاهد يستخدم Face ID لحماية بيانات المخزون",
-        "NSPhotoLibraryAddUsageDescription": "مجاهد يحتاج إلى الصلاحية لحفظ الصور"
+        "NSCameraUsageDescription": "كاشيرك يحتاج إلى الكاميرا لمسح الباركود",
+        "NSPhotoLibraryUsageDescription": "كاشيرك يحتاج إلى مكتبة الصور لإضافة صور المنتجات",
+        "NSFaceIDUsageDescription": "كاشيرك يستخدم Face ID لحماية بيانات المخزون",
+        "NSPhotoLibraryAddUsageDescription": "كاشيرك يحتاج إلى الصلاحية لحفظ الصور"
       }
     },
     "android": {
@@ -52,7 +52,7 @@
       [
         "expo-camera",
         {
-          "cameraPermission": "مجاهد يحتاج إلى الكاميرا لمسح الباركود",
+          "cameraPermission": "كاشيرك يحتاج إلى الكاميرا لمسح الباركود",
           "microphonePermission": false,
           "recordAudioAndroid": false
         }
@@ -60,14 +60,14 @@
       [
         "expo-image-picker",
         {
-          "photosPermission": "مجاهد يحتاج إلى مكتبة الصور لإضافة صور المنتجات",
-          "cameraPermission": "مجاهد يحتاج إلى الكاميرا لالتقاط صور المنتجات"
+          "photosPermission": "كاشيرك يحتاج إلى مكتبة الصور لإضافة صور المنتجات",
+          "cameraPermission": "كاشيرك يحتاج إلى الكاميرا لالتقاط صور المنتجات"
         }
       ],
       [
         "expo-local-authentication",
         {
-          "faceIDPermission": "مجاهد يستخدم Face ID لحماية بيانات المخزون"
+          "faceIDPermission": "كاشيرك يستخدم Face ID لحماية بيانات المخزون"
         }
       ],
       [

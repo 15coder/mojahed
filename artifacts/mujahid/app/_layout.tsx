@@ -17,13 +17,11 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { BiometricLock } from '@/components/BiometricLock';
 import { ErrorBoundary } from '@/components/ErrorBoundary';
 import { CategoriesProvider } from '@/context/CategoriesContext';
-import { LicenseProvider, useLicense } from '@/context/LicenseContext';
 import { ProductsProvider } from '@/context/ProductsContext';
 import { SettingsProvider, useSettings } from '@/context/SettingsContext';
 import { ToastProvider } from '@/context/ToastContext';
 import PinScreen from '@/app/pin';
 import PinRecoverScreen from '@/app/pin-recover';
-import ActivateScreen from '@/app/activate';
 
 I18nManager.allowRTL(true);
 I18nManager.forceRTL(true);
@@ -34,7 +32,6 @@ const queryClient = new QueryClient();
 
 function RootLayoutNav() {
   const { settings, isLocked, unlock, isLoading } = useSettings();
-  const { isActivated, isChecking } = useLicense();
   const [showRecovery, setShowRecovery] = useState(false);
 
   useEffect(() => {
@@ -44,11 +41,7 @@ function RootLayoutNav() {
     }
   }, []);
 
-  if (isLoading || isChecking) return null;
-
-  if (!isActivated) {
-    return <ActivateScreen />;
-  }
+  if (isLoading) return null;
 
   if (isLocked) {
     if (showRecovery) {
@@ -110,15 +103,13 @@ export default function RootLayout() {
           <GestureHandlerRootView style={{ flex: 1 }}>
             <KeyboardProvider>
               <SettingsProvider>
-                <LicenseProvider>
-                  <CategoriesProvider>
-                    <ProductsProvider>
-                      <ToastProvider>
-                        <RootLayoutNav />
-                      </ToastProvider>
-                    </ProductsProvider>
-                  </CategoriesProvider>
-                </LicenseProvider>
+                <CategoriesProvider>
+                  <ProductsProvider>
+                    <ToastProvider>
+                      <RootLayoutNav />
+                    </ToastProvider>
+                  </ProductsProvider>
+                </CategoriesProvider>
               </SettingsProvider>
             </KeyboardProvider>
           </GestureHandlerRootView>

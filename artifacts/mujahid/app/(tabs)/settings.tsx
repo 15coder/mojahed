@@ -429,7 +429,7 @@ export default function SettingsScreen() {
         </TouchableOpacity>
         <View style={styles.headerTexts}>
           <Text style={[styles.pageTitle, { color: colors.foreground }]}>الإعدادات</Text>
-          <Text style={[styles.pageSubtitle, { color: colors.silver }]}>{settings.appName || 'مجاهد للتجارة'}</Text>
+          <Text style={[styles.pageSubtitle, { color: colors.silver }]}>{settings.appName || 'كاشيرك'}</Text>
         </View>
         <Image source={appIcon} style={styles.headerIcon} contentFit="contain" />
       </View>
@@ -792,7 +792,7 @@ export default function SettingsScreen() {
         {/* Info */}
         <SectionHeader title="معلومات التطبيق" colors={colors} icon="information-circle-outline" />
         <View style={[styles.card, { backgroundColor: colors.card, borderColor: colors.border }]}>
-          <InfoRow label="اسم التطبيق" value={settings.appName || 'مجاهد للتجارة'} colors={colors} />
+          <InfoRow label="اسم التطبيق" value={settings.appName || 'كاشيرك'} colors={colors} />
           <InfoRow label="الإصدار" value="1.3.0" colors={colors} />
           <InfoRow label="عدد المنتجات" value={String(products.length)} colors={colors} />
           <InfoRow label="عدد الأقسام" value={String(categories.length)} colors={colors} last />

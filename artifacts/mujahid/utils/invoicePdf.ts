@@ -151,8 +151,8 @@ import * as Print from 'expo-print';
     </style>
   </head>
   <body>
-    <div class="watermark">مجاهد للتجارة</div>
-    <div class="store-name">مجاهـد للتجـارة</div>
+    <div class="watermark">كاشيرك</div>
+    <div class="store-name">كاشيرك</div>
     <hr class="divider-heavy">
     <div class="meta">
       <div>فاتورة رقم ${invoice.number}</div>
@@ -172,7 +172,7 @@ import * as Print from 'expo-print';
       سعر الصرف الحالي : 1 دولار = ${fmt(invoice.exchangeRate)} ل.س.ق &nbsp;|&nbsp; ${fmt(syjRate)} ل.س.ج
     </div>
     <div class="footer">
-      تم إنشاء الملف عبر تطبيق <span class="hl">"مجاهد للتجارة"</span> . من برمجة <span class="hl">"نداء الرحمن عبود"</span>
+      تم إنشاء الملف عبر تطبيق <span class="hl">"كاشيرك"</span> . من برمجة <span class="hl">"نداء الرحمن عبود"</span>
     </div>
   </body>
   </html>`;

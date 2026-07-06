@@ -78,7 +78,7 @@ export default function ProductDetailScreen() {
     }
     if (product!.notes) lines.push(`📝 ${product!.notes}`);
     lines.push('━━━━━━━━━━━━━━━');
-    lines.push('📱 تطبيق مجاهد للتجارة');
+    lines.push('📱 تطبيق كاشيرك');
     try {
       await Share.share({ message: lines.join('\n') });
     } catch {}

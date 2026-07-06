@@ -28,7 +28,7 @@ const DEFAULT_SETTINGS: AppSettings = {
   biometricEnabled: false,
   darkMode: 'system',
   themeId: DEFAULT_THEME_ID,
-  appName: 'مجاهد للتجارة',
+  appName: 'كاشيرك',
   pinEnabled: false,
   pinCode: '',
   securityKey: generateSecurityKey(),

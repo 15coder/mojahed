@@ -135,7 +135,7 @@ export default function PinScreen({ onUnlock, onRecover }: Props) {
         {/* Title */}
         <Animated.View entering={FadeInDown.delay(80).duration(320)} style={styles.titleBlock}>
           <Text style={[styles.title, { color: colors.foreground }]}>
-            {settings.appName || 'مجاهد للتجارة'}
+            {settings.appName || 'كاشيرك'}
           </Text>
           <Text style={[styles.subtitle, { color: error ? colors.destructive : colors.mutedForeground }]}>
             {error ? 'رمز PIN غير صحيح، حاول مجدداً' : 'قم بإدخال رمز PIN خاصتك'}
